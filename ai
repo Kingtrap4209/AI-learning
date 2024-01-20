@@ -1,0 +1,31 @@
+```python
+# Importing the necessary libraries
+import random
+
+# Creating a class for the Learning AI
+class LearningAI:
+    def __init__(self):
+        self.knowledge = {}  # A dictionary to store the AI's knowledge
+
+    def learn(self, question, answer):
+        self.knowledge[question] = answer
+
+    def predict(self, question):
+        if question in self.knowledge:
+            return self.knowledge[question]
+        else:
+            return "I don't know the answer to that question."
+
+# Creating an instance of the LearningAI class
+ai = LearningAI()
+
+# Training the AI with some sample data
+ai.learn("What is the capital of France?", "Paris")
+ai.learn("Who painted the Mona Lisa?", "Leonardo da Vinci")
+ai.learn("What is the square root of 16?", "4")
+
+# Testing the AI's prediction
+question = input("Ask me a question: ")
+prediction = ai.predict(question)
+print(prediction)
+```
